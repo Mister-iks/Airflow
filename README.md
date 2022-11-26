@@ -18,7 +18,7 @@ Airflow/
 ```
 
 ![Structure](img/structure.PNG)
-
+`requirements.txt` contiendra les dépendances externes dont nous aurons besoins
 
 ## Deployment
 
