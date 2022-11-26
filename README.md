@@ -16,6 +16,10 @@ Airflow/
  |-- logs/
  |-- plugins/
 ```
+
+![Structure](img/structure.PNG)
+
+
 ## Deployment
 
 Pour lancer le projet
