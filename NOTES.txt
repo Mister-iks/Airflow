@@ -1,0 +1,39 @@
+					======================================================== 
+  						     PRESENTATION AIRFLOW
+					======================================================== 
+
+Airflow a commencé comme un projet open source chez Airbnb. 
+En 2015, Airbnb se développait rapidement et avait du mal à gérer 
+les vastes quantités de données internes qu'il générait chaque jour.
+
+Les ingénieurs de données, les data scientists et les analystes 
+d'Airbnb devaient régulièrement écrire des tâches par lots 
+planifiées pour automatiser les processus. 
+Pour répondre au besoin d'un outil de planification robuste, 
+Maxime Beauchemin a créé Airflow pour permettre à Airbnb de 
+créer, d'itérer et de surveiller rapidement des pipelines 
+de données par lots.
+	
+Le projet a rejoint l'incubateur officiel de la Fondation Apache en 
+avril 2016 et a obtenu son diplôme de projet de haut niveau 
+en janvier 2019. 
+En août 2022,Airflow comptait plus de 2 000 contributeurs, 16900 
+engagements et 26 900 étoiles sur GitHub . 
+
+					======================================================== 
+  						     	CONCEPTS		      	      
+					======================================================== 
+
+with DAG(...) as dag:instancie un contexte DAG dans lequel des tâches peuvent être définies et des dépendances données. :
+
+dag_id(Obligatoire) : nom du DAG qui s'affiche dans l'interface utilisateur d'Airflow. 
+
+start_date(Obligatoire) : la date et l'heure auxquelles le DAG doit commencer à s'exécuter, données sous la forme d'un objet datetime. 
+
+schedule_interval: fréquence d'exécution du DAG.  une expression CRON ou une macro telle que "@daily". 
+
+catchup: définit si le DAG réexécute toutes les exécutions de DAG planifiées avant la date d'aujourd'hui. 
+
+tags : définit les balises qui s'affichent sur la page des DAG de l'interface utilisateur d'Airflow. Ceux-ci peuvent vous aider à organiser les DAG dans des projets plus complexes.
+
+default_args: une liste de configurations pour le comportement du DAG. 
