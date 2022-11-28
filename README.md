@@ -1,31 +1,30 @@
 
 # Apache Airflow
 
-## Structuration
-- `dags/`  Dossier en synchrone avec notre container, c'est dans ce dossier que les dags seront écrit.
-- `logs/` Contient les logs de notre application.
-- `plugins/` Contiendra les plugins externes non présente sur l'image docker
+## Structuring
+- `dags/` Folder synchronously with our container, it is in this folder that the dags will be written.
+- `logs/` Contains the logs of our application.
+- `plugins/` Will contain external plugins not present on the docker image
 
 ```bash
 Airflow/
  |-- dags/
- |   |-- custom_class/
- |   |-- data/
- |   | -- | -- input_files/
- |   | -- | -- output_files/
+ | |-- custom_class/
+ | |-- data/
+ | | -- | --input_files/
+ | | -- | --output_files/
  |-- logs/
  |-- plugins/
 ```
 
 ![Structure](img/structure.PNG)
-`requirements.txt` contiendra les dépendances externes dont nous aurons besoins
+`requirements.txt` will contain the external dependencies we will need
 
 ## Deployment
 
-Pour lancer le projet
+To launch the project
 
 ```bash
   docker compose-up
 ```
-puis ouvir votre navigateur `localhost:8080`
-
+then open your browser `localhost:8080`
