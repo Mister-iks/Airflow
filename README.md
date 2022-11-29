@@ -23,8 +23,15 @@ Airflow/
 ## Deployment
 
 To launch the project
-
-```bash
-  docker compose-up
 ```
+echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
+docker-compose up airflow-init
+docker build . --tag extending_airflow:latest
+docker-compose up -d --no-deps --build airflow-webserver airflow-scheduler
+```
+and finally
+```
+docker-compose up 
+```
+
 then open your browser `localhost:8080`
